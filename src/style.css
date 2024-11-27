@@ -1,0 +1,178 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button, input, textarea {
+    appearance: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+/* Set general styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+
+    background-image: url(./background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    min-height: max(800px,100vh);
+    min-width: 500px;
+}
+
+/* Define custom font*/
+@font-face {
+    font-family: 'Heading1';
+    src: url(./italianno-regular-otf-webfont.woff) format('woff'),
+    url(./italianno-regular-otf-webfont.woff2) format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    background-color: rgba(33, 59, 51, 0.9);
+    font-family: 'Heading1', sans-serif;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Heading1', sans-serif;
+    font-size: 3.5rem;
+    padding-top: 15px; 
+}
+
+.btn-header {
+    background-color: inherit;
+    color: inherit;
+    font-size: 2rem;
+    padding: 5px 20px;
+    margin: 10px 20px;
+}
+
+.btn-header:hover, .btn-header:focus {
+    background-color: rgba(76, 127, 111, 0.7);
+}
+
+.btn-header:focus {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 4px 4px rgba(108, 208, 155, 0.8);
+    border-radius: 5px;
+}
+
+/* Main content styles */   
+
+#home {
+    height: 400px;
+    width: clamp(800px, 70%, 1000px);
+    margin: 80px auto;
+    background-color: rgba(51, 89, 105, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 2px 5px rgba(13, 34, 60, 0.6);
+
+    display: flex;
+}
+
+#home .banner {
+    background-image: url(./pizza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 400px;
+    width: 50%;
+}
+
+#home .intro {
+    min-width: 400px;
+    width: 50%;
+    padding: 20px;
+    line-height: 1.5rem;
+    color:rgba(36, 227, 170, 0.9);
+}
+
+.intro h2 {
+    font-size: 2.4rem;
+    font-family: 'Heading1', sans-serif;
+    margin-bottom: 30px;
+}
+
+.intro p {
+    margin-top: 20px;
+    text-align: start;
+    width: 95%;
+
+    color:rgba(190, 226, 242, 0.8);
+    font-size: 1rem;
+}
+
+.disabled {
+    display: none;
+}
+
+/* Menu styles */
+#menu {
+    width: clamp(500px, 60%, 1000px);
+    margin: 80px auto;
+    background-color: rgba(51, 89, 105, 0.8);
+    border-radius: 10px;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.menu-item {   
+    background-color: rgba(27, 51, 56, 0.9);
+    height: 220px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 1px rgba(13, 34, 60, 0.4);
+    padding: 10px;
+}
+
+.menu-item:hover {
+    background-color: rgba(76, 127, 111, 0.2);
+}
+
+#menu img {
+    width: 100%;
+    height: 70%;
+    border-radius: 6px;
+}
+
+#menu h2 {
+    font-size: 2.4rem;
+    font-family: 'Heading1', sans-serif;
+    margin-bottom: 30px;
+    padding: 20px;
+    position: absolute;
+    left: 2px;
+}
+
+#menu p {
+    position: absolute;
+    font-size: 1.5rem;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+.disabled {
+    display: none;
+}
+/* @media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    
+} */
